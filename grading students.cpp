@@ -1,29 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main() {
-    int n;
-    cin >> n;
-    int a[n];
-    for(int i=0;i<n;i++)
-        {
-        cin>>a[i];
-    }
-    for(int i=0;i<n;i++)
-        {
-        	if(a[i]>=38){
-        					if((a[i]%5)==3)
-								{
-									a[i]=a[i]+2;
-								}
-        					if((a[i]%5)==4)
-								{
-									a[i]=a[i]+1;}
-    							}
-    	}
-    	for(int i=0;i<n;i++)
-    	{
-    		cout<<a[i]<<endl;
-		}
-    return 0;
+
+void solution() {
+     int n, x;
+     cin>>n;
+     for(int i=0; i<n; i++){
+        cin>>x;
+        if(x>=38 and x%5>=3){
+            while(x%5!=0){
+               x++;
+            }
+        }
+        cout<<x<<endl;
+     }
 }
 
+int main () {
+    solution();
+    return 0;
+}
