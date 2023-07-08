@@ -18,6 +18,7 @@ node * insert(node * root, int value)
     newNode->right = NULL;
     if(root == NULL){
        root = newNode;
+       return root;
     }
     else if(root->data < value ){
         root->right = insert(root->right , value);
